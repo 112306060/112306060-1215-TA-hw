@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>caculator</title>
+</head>
+<body>
+    <h>caculator<h>
+
+    
+    <script>
+           function add(num1,num2){
+            return num1+num2;
+           }
+           function subtract(num1,num2){
+            return num1-num2;
+           }
+           function multiply(num1,num2){
+            return num1*num2;
+           }
+           function divide(num1,num2){
+            return num1/num2;
+           }
+            
+           let num1 = parseFloat(prompt('Enter the first number'));
+           while(isNaN(num1)){
+            alert('Please enter a valid number！');
+            num1 = parseFloat(prompt('Enter the first number'));
+           }
+           let num2 = parseFloat(prompt('Enter the second number'));
+           while(isNaN(num2)){
+            alert('Please enter a valid number！');
+            num2 = parseFloat(prompt('Enter the second number'));
+           }
+           let operation = prompt('choose an operation (+,-,*,/):');
+           while(!["+","-","*","/"].includes(operation)){
+            alert('Please enter a valid operation！');
+            operation = prompt('choose an operation (+,-,*,/):');
+           }
+           var result;
+           if(operation==="+"){
+            result=add(num1,num2);
+           }else if(operation==="-"){
+            result=subtract(num1,num2);
+           }else if(operation==="*"){
+            result=multiply(num1,num2);
+           }else if(operation==="/"){
+            result=divide(num1,num2);
+           } 
+            alert('The answer is : '+result);
+
+            
+        
+    </script>
+            
+</body>
+</html
